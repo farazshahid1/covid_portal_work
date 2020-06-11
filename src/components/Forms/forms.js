@@ -11,6 +11,8 @@ class form extends ReactBuilderParentComponent{
             age: '',
             email: ''
         }
+
+        this.display = this.display.bind(this)
     }
     
 
@@ -53,7 +55,16 @@ class form extends ReactBuilderParentComponent{
     }
 
     componentDidMount(){
+        console.log("comonentDidMount")
+        this.addReactBuilderEventListener('Form.add', "display");
 
+        // const state1= this
+        // debugger
+    }
+
+    display(e){
+        console.log('worked1')
+        console.log(e.detail.data)
     }
 
     
@@ -61,14 +72,10 @@ class form extends ReactBuilderParentComponent{
         event.preventDefault();
         alert("submited Form")
         
-        const state = this;
-        debugger
+        // const state = this;
+        // debugger
         
-        this.addReactBuilderEventListener('Form.add', function(e) {
-            console.log("workingggg")
-            console.log(e.detail.data)
-        });
-
+      
         const v = {...this.state}
 
         this.trigger(v, 'Form.add', null)
@@ -84,6 +91,8 @@ class form extends ReactBuilderParentComponent{
 
     render(){
 
+        // const state = this;
+        // debugger
         return(
             <div className='divs'>
                 <h1>FORM</h1>
@@ -113,7 +122,7 @@ class form extends ReactBuilderParentComponent{
             
         )
             
-        
+       
     }
 }
 

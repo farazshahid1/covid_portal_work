@@ -22,7 +22,7 @@
     
    
     margin: auto ;
-    width: 60%;
+    width: 70%;
     /* text-align: center; */
     box-shadow: 0 2px 3px #ccc;
     border: 1px solid #eee;
@@ -31,9 +31,9 @@
 }
 
 .forms{
-     width: 100%;
+    width: 100%;
     padding: 20px;
-    margin: 50px;
+    margin: 30px;
     box-sizing: border-box;
 }
 
@@ -42,7 +42,7 @@ label {
     display: block;
     margin-bottom: 8px;
     margin: auto;
-    width: 50%;
+    width: 70%;
     
 }
 
@@ -53,7 +53,7 @@ label {
     font: inherit;
     padding: 6px 10px;
     display: block;
-    width: 50%;
+    width: 70%;
     margin: auto;
     box-sizing: border-box;
 }
