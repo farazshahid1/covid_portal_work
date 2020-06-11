@@ -17,13 +17,11 @@ class Info extends ReactBuilderParentComponent{
     componentDidMount()
     {
         this.addReactBuilderEventListener('Form.add', 'gotEvent')
-        // const state = this;
-        // debugger;
+        
     }
 
     gotEvent(e){
-        console.log("itWorks")
-        console.log(e.detail.data)
+       
         this.setState({
             ...e.detail.data
         })

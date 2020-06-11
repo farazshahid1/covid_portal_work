@@ -16,10 +16,14 @@ class ReactBuilderContext extends React.Component {
         window[this.key] = window[this.key] || {};     
     }
     get(args){
+        
         let data = window[this.key];
+        // debugger
         if(data){
             if(typeof args === 'string' || args instanceof String){
                 data = data[args];
+               
+                // console.log(data)
             }else if(Array.isArray(args)){
                 for(let i=0; i < args.length; i++){
                     if(args[i] in data){

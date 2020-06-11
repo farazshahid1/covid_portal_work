@@ -51,19 +51,16 @@ class form extends ReactBuilderParentComponent{
         }
         
       
-      //  console.log(event.target.name)
+     
     }
 
     componentDidMount(){
-        console.log("comonentDidMount")
+       
         this.addReactBuilderEventListener('Form.add', "display");
-
-        // const state1= this
-        // debugger
     }
 
     display(e){
-        console.log('worked1')
+        
         console.log(e.detail.data)
     }
 
@@ -81,12 +78,6 @@ class form extends ReactBuilderParentComponent{
         this.trigger(v, 'Form.add', null)
 
         
-    }
-
-    showHandler = (event) => {
-       
-        alert(event)
-       
     }
 
     render(){
@@ -115,7 +106,7 @@ class form extends ReactBuilderParentComponent{
                 <br/>
                 <input className='Button' type='submit'/>
                 </form>
-                <button type="button" onClick={this.showHandler}>Show</button>
+                
             </div>
            
            
