@@ -14,7 +14,6 @@ class ReactBuilderParent extends React.Component {
     componentDidMount(){   
         //let __self = this;
         if(Array.isArray(this.props.__initContext)){
-          
             this.props.__initContext.forEach((__init) => {                
                 if(__init.url){
                     let url = __init.url;
@@ -34,7 +33,7 @@ class ReactBuilderParent extends React.Component {
                             // instead of a catch() block so that we don't swallow
                             // exceptions from actual bugs in components.
                             (error) => {
-                                
+                                   
                             }
                         )
                         .then(

@@ -43,10 +43,6 @@ class ReactBuilderParentComponent extends React.Component {
     
     __onReactBuilderEvent(e){        
         let __reactBuilderEvent = this.__events[e.type];
-        // console.log("worked")
-        // console.log(__reactBuilderEvent.childEventHandler);
-        // console.log(this["display"])
-        console.log(this);
         if(__reactBuilderEvent){
             //if a component is listening to AutoComplete.select and AutoComplete.select#123 then AutoComplete.select will not work and it will listen to select from specific id only
             if(Object.keys(__reactBuilderEvent.ids).length === 0 && this.isFunction(this[__reactBuilderEvent.childEventHandler])){

@@ -16,14 +16,10 @@ class ReactBuilderContext extends React.Component {
         window[this.key] = window[this.key] || {};     
     }
     get(args){
-        
         let data = window[this.key];
-        // debugger
         if(data){
             if(typeof args === 'string' || args instanceof String){
                 data = data[args];
-               
-                // console.log(data)
             }else if(Array.isArray(args)){
                 for(let i=0; i < args.length; i++){
                     if(args[i] in data){
@@ -43,6 +39,18 @@ class ReactBuilderContext extends React.Component {
     }
     render(){
         return null;
+    }
+    translate(message){
+        let newMessage = message;
+        let languageId = this.get(["page","langue_id"]);
+        if(!isNaN(languageId)){
+            languageId = "" + languageId;
+            newMessage = this.get(["messages",message,languageId]);
+            if(!(typeof newMessage === 'string' || newMessage instanceof String) || newMessage === ""){
+                newMessage = message;
+            }
+        }
+        return newMessage;
     }
 }
 
